@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ko" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>연습1: 아이디어 정의 및 컨텍스트 설정 &#8212; Bing에서 Copilot을 사용하여 생성 AI 살펴보기</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=ae323b5b"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/translations.js?v=e33e7ba0"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01-define-idea-set-context';</script>
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="next" title="연습2: 이미지 만들기" href="02-create-hero-image.html" />
+    <link rel="prev" title="Bing에서 Microsoft Copilot 사용해보기" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ko"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Bing에서 Copilot을 사용하여 생성 AI 살펴보기</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">검색</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Bing에서 Microsoft Copilot 사용해보기
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">연습1: 아이디어 정의 및 컨텍스트 설정</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-create-hero-image.html">연습2: 이미지 만들기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-make-grand-entrance.html">연습3: 웅장한 입구 만들기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-brainstorm-destination-features.html">연습4: 목적지 특징들에 대한 브레인스토밍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-plan-menu.html">연습5: 메뉴 계획</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-ideate-ambience-music.html">연습6: 분위기 및 음악에 대한 아이디어 구상</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-create-branding.html">연습7: 브랜딩 자료 만들기</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/SDSTony/copilot-in-bing" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="소스 저장소"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/SDSTony/copilot-in-bing/issues/new?title=Issue%20on%20page%20%2F01-define-idea-set-context.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="이슈 열기"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="이 페이지 다운로드">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/01-define-idea-set-context.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="소스 파일 다운로드"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="PDF로 인쇄"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="전체 화면으로보기"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>연습1: 아이디어 정의 및 컨텍스트 설정</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 내용 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">첫번째 프롬프트 예시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-copilot">Microsoft Copilot 답변 예시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">두번째 프롬프트 예시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Microsoft Copilot 답변 예시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">핵심 개념 복습</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>연습1: 아이디어 정의 및 컨텍스트 설정<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>원본: <a class="reference external" href="https://learn.microsoft.com/ko-kr/training/modules/explore-generative-ai-copilot-bing/2-exercise-define-idea-set-context">https://learn.microsoft.com/ko-kr/training/modules/explore-generative-ai-copilot-bing/2-exercise-define-idea-set-context</a></p>
+<section id="id2">
+<h2>첫번째 프롬프트 예시<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">당신은</span> <span class="n">감각을</span> <span class="n">자극하고</span> <span class="n">고객을</span> <span class="n">마법</span> <span class="n">같은</span> <span class="n">세계로</span> <span class="n">안내하는</span> <span class="n">몰입형</span> <span class="n">경험을</span> <span class="n">창조하는</span> <span class="n">특별한</span> <span class="n">재능을</span> <span class="n">가진</span> <span class="n">디자이너입니다</span><span class="o">.</span> <span class="n">매혹적인</span> <span class="n">사운드스케이프</span><span class="p">,</span> <span class="n">시각적</span> <span class="n">요소</span><span class="p">,</span> <span class="n">그리고</span> <span class="n">신중하게</span> <span class="n">큐레이팅된</span> <span class="n">환경을</span> <span class="n">완벽하게</span> <span class="n">결합하여</span><span class="p">,</span> <span class="n">기쁨과</span> <span class="n">호기심을</span> <span class="n">동시에</span> <span class="n">불러일으키는</span> <span class="n">특별한</span> <span class="n">여정을</span> <span class="n">연출할</span> <span class="n">수</span> <span class="n">있는</span> <span class="n">능력을</span> <span class="n">지니고</span> <span class="n">있습니다</span><span class="o">.</span>
+
+<span class="n">당신의</span> <span class="n">창의력에는</span> <span class="n">한계가</span> <span class="n">없으며</span><span class="p">,</span> <span class="n">상상력을</span> <span class="n">자극하는</span> <span class="n">대담한</span> <span class="n">아이디어를</span> <span class="n">꿈꾸는</span> <span class="n">동시에</span><span class="p">,</span> <span class="n">하나의</span> <span class="n">완성품을</span> <span class="n">매끄럽게</span> <span class="n">엮어내는</span> <span class="n">세심한</span> <span class="n">디테일에도</span> <span class="n">신경을</span> <span class="n">씁니다</span><span class="o">.</span>
+
+<span class="n">여러</span> <span class="n">감각을</span> <span class="n">동시에</span> <span class="n">사로잡는</span> <span class="n">놀라운</span> <span class="n">능력으로</span><span class="p">,</span> <span class="n">당신은</span> <span class="n">사람들을</span> <span class="n">감각의</span> <span class="n">교향곡에</span> <span class="n">휩싸이게</span> <span class="n">하여</span><span class="p">,</span> <span class="n">그들을</span> <span class="n">매료시키고</span> <span class="n">기쁘게</span> <span class="n">하며</span> <span class="n">더</span> <span class="n">많은</span> <span class="n">것을</span> <span class="n">갈망하게</span> <span class="n">만드는</span> <span class="n">잊을</span> <span class="n">수</span> <span class="n">없는</span> <span class="n">순간을</span> <span class="n">창조할</span> <span class="n">수</span> <span class="n">있습니다</span><span class="o">.</span> <span class="n">당신은</span> <span class="n">나와</span> <span class="n">함께</span> <span class="n">고객들을</span> <span class="n">위한</span> <span class="n">새로운</span> <span class="n">경험</span> <span class="n">창조에</span> <span class="n">기여하게</span> <span class="n">될</span> <span class="n">것입니다</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="microsoft-copilot">
+<h2>Microsoft Copilot 답변 예시<a class="headerlink" href="#microsoft-copilot" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>당신의 창의력과 몰입형 경험 디자인에 대한 열정이 정말 인상적입니다! 함께 새로운 경험을 창조하는 여정이 기대됩니다. 어떤 프로젝트를 염두에 두고 계신가요? 혹은 특정한 아이디어나 테마가 있으신가요? 함께 멋진 것을 만들어 봅시다!
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>두번째 프롬프트 예시<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">이</span> <span class="n">프로젝트에</span> <span class="n">대해</span> <span class="n">제가</span> <span class="n">생각한</span> <span class="n">아이디어가</span> <span class="n">있는데</span><span class="p">,</span> <span class="n">몇</span> <span class="n">가지</span> <span class="n">요점들을</span> <span class="n">제공할</span> <span class="n">예정입니다</span><span class="o">.</span> <span class="n">이</span> <span class="n">내용을</span> <span class="n">바탕으로</span> <span class="n">여행</span> <span class="n">마케팅</span> <span class="n">톤으로</span> <span class="n">문단을</span> <span class="n">작성해주세요</span><span class="o">.</span> <span class="n">이</span> <span class="n">아이디어를</span> <span class="n">정말</span> <span class="n">생동감</span> <span class="n">있게</span> <span class="n">표현하면서</span> <span class="n">세부사항을</span> <span class="n">더해</span> <span class="n">주셨으면</span> <span class="n">합니다</span><span class="o">.</span> <span class="n">이</span> <span class="n">목적지의</span> <span class="n">이름은</span> <span class="n">언급하지</span> <span class="n">말아</span> <span class="n">주세요</span><span class="o">.</span> <span class="n">이</span> <span class="n">장소의</span> <span class="n">독특함에만</span> <span class="n">우선</span> <span class="n">집중해</span> <span class="n">주시면</span> <span class="n">됩니다</span><span class="o">.</span> <span class="n">이</span> <span class="n">경험의</span> <span class="n">브랜드와</span> <span class="n">이름은</span> <span class="n">나중에</span> <span class="n">정할</span> <span class="n">예정입니다</span><span class="o">.</span>
+
+<span class="o">-</span> <span class="n">새로운</span> <span class="n">목적지에</span> <span class="n">대한</span> <span class="n">경험</span> <span class="n">강조</span>
+<span class="o">-</span> <span class="n">숲속</span> <span class="n">깊은</span> <span class="n">곳에</span> <span class="n">위치한</span> <span class="n">아늑하고</span> <span class="n">은밀한</span> <span class="n">레스토랑</span>
+<span class="o">-</span> <span class="n">나무</span> <span class="n">가지</span> <span class="n">위에</span> <span class="n">지어진</span> <span class="n">고공</span> <span class="n">레스토랑</span>
+<span class="o">-</span> <span class="n">유기적인</span> <span class="n">자연과</span> <span class="n">초대받은</span> <span class="n">사람만이</span> <span class="n">갈</span> <span class="n">수</span> <span class="n">있는</span> <span class="n">장소가</span> <span class="n">결합된</span> <span class="n">테마</span>
+<span class="o">-</span> <span class="n">신비롭고</span> <span class="n">숨겨진</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>Microsoft Copilot 답변 예시<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">상상해보세요</span><span class="o">.</span> <span class="n">숲속</span> <span class="n">깊은</span> <span class="n">곳</span><span class="p">,</span> <span class="n">자연의</span> <span class="n">품에</span> <span class="n">안긴</span> <span class="n">아늑하고</span> <span class="n">은밀한</span> <span class="n">레스토랑이</span> <span class="n">있습니다</span><span class="o">.</span> <span class="n">이곳은</span> <span class="n">나무</span> <span class="n">가지</span> <span class="n">위에</span> <span class="n">지어진</span> <span class="n">고공</span> <span class="n">레스토랑으로</span><span class="p">,</span> <span class="n">마치</span> <span class="n">숲의</span> <span class="n">요정들이</span> <span class="n">사는</span> <span class="n">신비로운</span> <span class="n">세계에</span> <span class="n">초대받은</span> <span class="n">듯한</span> <span class="n">느낌을</span> <span class="n">줍니다</span><span class="o">.</span> <span class="n">초대받은</span> <span class="n">사람만이</span> <span class="n">갈</span> <span class="n">수</span> <span class="n">있는</span> <span class="n">이</span> <span class="n">특별한</span> <span class="n">장소는</span> <span class="n">유기적인</span> <span class="n">자연과</span> <span class="n">완벽하게</span> <span class="n">어우러져</span><span class="p">,</span> <span class="n">마치</span> <span class="n">자연의</span> <span class="n">일부가</span> <span class="n">된</span> <span class="n">듯한</span> <span class="n">경험을</span> <span class="n">선사합니다</span><span class="o">.</span>
+
+<span class="n">이곳에서의</span> <span class="n">식사는</span> <span class="n">단순한</span> <span class="n">식사가</span> <span class="n">아닙니다</span><span class="o">.</span> <span class="n">자연의</span> <span class="n">소리와</span> <span class="n">향기</span><span class="p">,</span> <span class="n">그리고</span> <span class="n">눈앞에</span> <span class="n">펼쳐진</span> <span class="n">아름다운</span> <span class="n">풍경이</span> <span class="n">어우러져</span><span class="p">,</span> <span class="n">모든</span> <span class="n">감각을</span> <span class="n">자극하는</span> <span class="n">특별한</span> <span class="n">여정이</span> <span class="n">됩니다</span><span class="o">.</span> <span class="n">신비롭고</span> <span class="n">숨겨진</span> <span class="n">이</span> <span class="n">레스토랑에서의</span> <span class="n">시간은</span> <span class="n">일상에서</span> <span class="n">벗어나</span> <span class="n">새로운</span> <span class="n">세계로의</span> <span class="n">여행을</span> <span class="n">떠나는</span> <span class="n">듯한</span> <span class="n">기분을</span> <span class="n">선사합니다</span><span class="o">.</span> <span class="n">이곳에서의</span> <span class="n">경험은</span> <span class="n">단순한</span> <span class="n">식사를</span> <span class="n">넘어</span><span class="p">,</span> <span class="n">잊을</span> <span class="n">수</span> <span class="n">없는</span> <span class="n">추억으로</span> <span class="n">남을</span> <span class="n">것입니다</span><span class="o">.</span>
+
+<span class="n">이</span> <span class="n">특별한</span> <span class="n">장소에서</span> <span class="n">당신의</span> <span class="n">감각을</span> <span class="n">깨우고</span><span class="p">,</span> <span class="n">자연과</span> <span class="n">하나가</span> <span class="n">되는</span> <span class="n">마법</span> <span class="n">같은</span> <span class="n">순간을</span> <span class="n">경험해보세요</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>핵심 개념 복습<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Copilot의 대화 스타일 설정을 통해 길이나 퀄리티가 다양한 답변 결과를 얻을 수 있음: 창의적인(Creative), 균형잡힌(Balanced), 정확한(Precise)</p></li>
+<li><p>하나의 세션에서 생성되는 응답 수에는 제한이 있음</p></li>
+<li><p>글 콘텐츠 작성 시 효율적으로 작업 가능, 사용자는 요점만 제공하고 요점 연결 및 세부사항 추가는 Copilot에게 위임: <code class="docutils literal notranslate"><span class="pre">몇</span> <span class="pre">가지</span> <span class="pre">요점들을</span> <span class="pre">제공할</span> <span class="pre">테니,</span> <span class="pre">~~~</span> <span class="pre">할</span> <span class="pre">수</span> <span class="pre">있도록</span> <span class="pre">세부</span> <span class="pre">사항을</span> <span class="pre">추가해</span> <span class="pre">주세요</span></code></p></li>
+<li><p>생성되는 글의 스타일이나 어조 설정 가능: <code class="docutils literal notranslate"><span class="pre">여행</span> <span class="pre">마케팅</span> <span class="pre">톤으로~</span></code></p></li>
+<li><p>프롬프트 작성 시에는 생성되는 결과물에 포함되어야 하는 것과 포함되지 않아야 하는 것들을 명시적으로 알려주기, 사용자의 의도 및 맥락을 정확하게 Microsoft Copilot에게 전달하기: <code class="docutils literal notranslate"><span class="pre">~에만</span> <span class="pre">집중해주시면</span> <span class="pre">됩니다,</span> <span class="pre">~언급하지</span> <span class="pre">말아</span> <span class="pre">주세요</span></code></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">이전</p>
+        <p class="prev-next-title">Bing에서 Microsoft Copilot 사용해보기</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02-create-hero-image.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">다음</p>
+        <p class="prev-next-title">연습2: 이미지 만들기</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 내용
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">첫번째 프롬프트 예시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-copilot">Microsoft Copilot 답변 예시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">두번째 프롬프트 예시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Microsoft Copilot 답변 예시</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">핵심 개념 복습</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
