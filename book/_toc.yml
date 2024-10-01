@@ -4,10 +4,10 @@
 format: jb-book
 root: intro
 chapters:
-- file: 01.md
-- file: 02.md
-- file: 03.md
-- file: 04.md
-- file: 05.md
-- file: 06.md
-- file: 07.md
+- file: 01-define-idea-set-context.md
+- file: 02-create-hero-image.md
+- file: 03-make-grand-entrance.md
+- file: 04-brainstorm-destination-features.md
+- file: 05-plan-menu.md
+- file: 06-ideate-ambience-music.md
+- file: 07-create-branding.md
